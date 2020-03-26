@@ -12,7 +12,7 @@ $pageContent = <<< EOPAGE
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.6/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.6/dist/js/uikit-icons.min.js"></script>
-    <title>Useless</title>
+    <title>Copy and Paste</title>
 </head>
 <body>
     <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>Copy and paste</span></h1>
@@ -27,18 +27,18 @@ $pageContent = <<< EOPAGE
         <div class="uk-margin-medium-top">
             <label for="textPaste" >Text paste</label>
             <div class="uk-flex uk-flex-stretch">
-                <input class="uk-input" type="text" placeholder="click on paste button" id="textPaste" disabled>
+                <p id="textPaste"></p>
             </div>
         </div>
     </div>
 
     <div class="uk-width-1-3 uk-align-center">
         <button class="uk-button uk-button-default uk-margin-left" id="copy" onclick="copy()">Copy</button>
-        <button class="uk-button uk-button-default uk-margin-left" id="paste" >Paste</button>
+        <button class="uk-button uk-button-default uk-margin-left" id="paste" onclick="getClipboardContents()">Paste</button>
     </div>
-
+    
+    <script src="copyPaste.js"></script>
 </body>
-<script src="copyPaste.js"></script>
 </html>
 EOPAGE;
 echo $pageContent;

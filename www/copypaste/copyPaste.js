@@ -1,18 +1,15 @@
 function copy() {
-    //select the button
-    let textCopy = document.getElementById("copy");
+    /* Get the text field */
+  let copyText = document.getElementById("textCopy");
 
-    //select the text
-    // textCopy.select();
+  /* Select the text field */
+  copyText.select();
+  /*For mobile devices select range min max for text*/
+  copyText.setSelectionRange(0, 99999);
 
-    //copy text
-    document.execCommand("copy");
-    alert(document.execCommand("copy"))
-}
-
-function paste(){
-    let textPaste = document.getElementById("paste");
-
-    //paste the texte in html
-
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+    
+  /* Alert the copied text */
+  console.log("Copied the text: " + copyText.value);
 }

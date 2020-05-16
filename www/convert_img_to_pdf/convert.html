@@ -8,18 +8,26 @@
         <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
-        
+
         <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>Convert image to pdf</span></h1>
-        uk-form
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload Image" name="submit">
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="uk-margin">
+                <span class="uk-text-middle">Select .jpg .png file only</span>
+            </div>
+
+            <div class="uk-margin" uk-margin>
+                <div uk-form-custom="target: true">
+                    <input type="file">
+                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Select your image" name="text" onchange="previsualisez(this.value)">
+                </div>
+                <button class="uk-button uk-button-default" type="submit" name="convertButton">Convert</button>
+            </div>
         </form>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js" 
                 integrity="sha256-v789mr/zBbgR53mfydCI78CSAF+9+nRqu+JRfs1UPg0=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js" 
                 integrity="sha256-l+AmZGiFz41J+gms80qC7faslJDberZDhjEsmDmQy8s=" crossorigin="anonymous"></script>
+        <script src="convert.js"></script>
     </body>
 </html>
